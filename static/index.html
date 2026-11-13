@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Find services near you</title>
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@^6.15.0/dist/maplibre-gl.css">
+  <style>
+    * { box-sizing: border-box; border-radius: 0 !important; } 
+    body { max-width: 480px; margin: 24px auto; padding: 0 12px; font: 14px system-ui, sans-serif; }
+    h1 { margin: 0; padding: 12px; font-size: 16px; background: #A9C7B6; }
+    #search-input, button { display: block; width: 100%; margin: -1px 0 0; padding: 8px; font: inherit;
+                            text-align: left; border: 1px solid #111; background: #fff; }
+    button:hover { background: #A9C7B6; }
+    #map { height: 300px; margin-top: -1px; border: 1px solid #111; }
+    #status { margin: 0; padding: 8px; color: #666; }
+    ul { list-style: none; margin: 0; padding: 0; }
+  </style>
+</head>
+<body>
+  <h1>look uop services</h1>
+  <input id="search-input" type="search" placeholder="Search…" autocomplete="off" aria-label="Search a place">
+  <ul id="suggestions"></ul>
+  <button id="locate-btn">Use my saved location</button>
+  <div id="map"></div>
+  <p id="status" role="status">Loading services within 3 km…</p>
+  <ul id="results"></ul>
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
